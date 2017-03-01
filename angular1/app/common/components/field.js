@@ -12,7 +12,8 @@
     controller: [
       'gridSystem',
       function(gridSystem){
-          this.$onInit = () => this.gridClasses = gridSystem.toCssClasses(this.grid)
+          const vm = this
+          vm.$onInit = () => vm.gridClasses = gridSystem.toCssClasses(vm.grid)
       }
     ],
     template: `
